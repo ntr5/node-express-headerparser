@@ -30,8 +30,8 @@ app.get("/api/whoami", function (req, res) {
   // console.log(req.headers["accept-language"]);
   // console.log(req.headers["user-agent"]);
   res.json({
-    ipaddress: req.headers.host,
-    // ipaddress: req.headers["x-forwarded-for"],
+    // ipaddress: req.headers.host,
+    ipaddress: req.headers["x-forwarded-for"],
     language: req.headers["accept-language"],
     software: req.headers["user-agent"],
   });
